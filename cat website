@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cat Images</title>
+</head>
+<body>
+
+  <h1>Cat Images</h1>
+
+  <img id="catImage" src="https://cataas.com/cat">
+
+  <button id="refreshButton">Refresh</button>
+
+  <script>
+    function refreshImage() {
+      let randomNum = Math.random();
+      document.getElementById("catImage").src = "https://cataas.com/cat" + "?t=" + randomNum;
+    }
+
+    // Uncomment this line to refresh the image on page load
+    // window.onload = refreshImage;
+
+    document.getElementById("refreshButton").onclick = refreshImage;
+  </script>
+
+</body>
+</html> 
